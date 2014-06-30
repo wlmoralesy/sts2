@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="ListadoCuentas" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="3bf60afb-efa8-46fa-8df0-b68801a19110">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<field name="cod_sucu" class="java.lang.String"/>
+	<field name="nom_sucu" class="java.lang.String"/>
+	<field name="ciudad" class="java.lang.String"/>
+	<field name="cuenta" class="java.lang.String"/>
+	<field name="moneda" class="java.lang.String"/>
+	<field name="cliente" class="java.lang.String"/>
+	<field name="saldo" class="java.lang.Double"/>
+	<field name="feccreacion" class="java.util.Date">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="total_soles" class="java.lang.Double"/>
+	<field name="total_dolares" class="java.lang.Double"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="20" splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band height="18" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="110" splitType="Stretch">
+			<textField>
+				<reportElement uuid="fc5c7d4f-1dbd-4e4b-9078-7ae03fafb8a7" x="78" y="0" width="208" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{cod_sucu}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="b54a8992-ca2a-42bc-8136-dc35d2f61c73" x="78" y="24" width="208" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{nom_sucu}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="0fa21fa5-ffc9-4aa1-af81-b7e0bf3e9dc7" x="78" y="48" width="208" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{ciudad}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="eb10b91e-1bef-4717-9c1f-1f7869087dad" x="3" y="80" width="100" height="20"/>
+				<textElement/>
+				<text><![CDATA[cuenta]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="3e92a99d-689e-4f47-a090-b3b11e43f5e3" x="103" y="80" width="100" height="20"/>
+				<textElement/>
+				<text><![CDATA[moneda]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="c3b012e2-75c7-4088-8cc3-a04cb551837b" x="209" y="80" width="100" height="20"/>
+				<textElement/>
+				<text><![CDATA[cliente]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="7290863b-bee3-4425-91b0-8c5ae43dbad5" x="377" y="80" width="100" height="20"/>
+				<textElement/>
+				<text><![CDATA[saldo]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="29" splitType="Stretch">
+			<textField>
+				<reportElement uuid="57a3eba6-413a-47fb-a3cf-6cf302115b21" x="3" y="1" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{cuenta}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="5e8886ac-2ae3-4860-87b9-2d5fd073204d" x="106" y="2" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{moneda}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="0168af8e-648b-4a01-b444-4fd945dbc157" x="209" y="2" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{cliente}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="88d7085b-bc4c-41db-9de7-0795dac33324" x="377" y="2" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{saldo}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="50">
+			<textField>
+				<reportElement uuid="9d716b4e-d3e8-4401-bc65-545ca6fc28ab" x="103" y="10" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{total_soles}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="9df81808-0614-48fd-93ae-79dab497cd53" x="299" y="10" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{total_dolares}]]></textFieldExpression>
+			</textField>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="23" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="14"/>
+	</summary>
+</jasperReport>
